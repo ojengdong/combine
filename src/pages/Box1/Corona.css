@@ -1,0 +1,52 @@
+.Covid-frontBox {
+  width: calc(100%);
+  background-color: #f7f7f7;
+  margin-top: 100px;
+  padding: 20px;
+  position: relative;
+}
+
+.Covid-timeNow {
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Pretendard-Medium';
+}
+
+.Covid-timeNow {
+  width: calc(100%);
+  display: flex;
+  justify-content: right;
+  padding-right: 150px;
+}
+
+.Covid-countBox {
+  /* width: 800px; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* justify-content: space-between;
+  align-items: center; */
+  margin: 0 auto;
+  padding: 0 15% 50px;
+  /* padding: 0 20px 50px; */
+  text-align: center;
+}
+
+
+.Covid-about .number {
+  font-size: 60px;
+  font-family: 'georgia';
+  color: #414141;
+}
+
+.Covid-Nationwide,
+.Covid-Daejeon {
+  margin-bottom: 20px;
+  color: rgb(114, 114, 114);
+  font-weight: 700;
+  font-family: 'Pretendard-Medium';
+}
+
+.Covid-letter {
+  margin-top: 20px;
+  font-family: 'Pretendard-Medium';
+}
