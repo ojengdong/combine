@@ -1,8 +1,8 @@
 import React from 'react'
-import './Footer.css'
+import './LoginFooter.css'
 import { useState } from 'react'
 
-const footer = () => {
+const LoginFooter = () => {
   return (
     <div className='footer-box'>
         <div className="footer-top">
@@ -23,4 +23,4 @@ const footer = () => {
   )
 }
 
-export default footer
+export default LoginFooter

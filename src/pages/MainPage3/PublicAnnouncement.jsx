@@ -47,16 +47,16 @@ const Gonggo = () => {
 
           <div className='PublicAnnouncement-Swiper-wrapper'>
           <Swiper
-      // install Swiper modules
-      modules={[Navigation, Pagination,  A11y]}
-      spaceBetween={20}
-      slidesPerView={3}
-      navigation
-      pagination={{ clickable: true }}
-      // scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
-    >
+            // install Swiper modules
+            modules={[Navigation, Pagination,  A11y]}
+            spaceBetween={20}
+            slidesPerView={3}
+            navigation
+            pagination={{ clickable: true }}
+            // scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log('slide change')}
+          >
             <SwiperSlide>
               <div className='PublicAnnouncement-box1'>
                 <div className='PublicAnnouncement-box-inner'>

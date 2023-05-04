@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "./images/동의 아이콘 3.png";
-import Footer from "./Footer";
+import Footer from "../components/LoginFooter";
 import "./Join.css";
 import Login from "./Login";
 import Id from "./Join/Id";

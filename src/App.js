@@ -2,7 +2,7 @@ import './App.css';
 import Index from './pages/index/Index'
 import { BrowserRouter, Routes ,Route } from 'react-router-dom'
 import Mainpage from './pages/Mainpage';
-import GesifanJunche from './pages/Box4/GesifanJunche';
+import GesifanJunche from './pages/MainPage4/GesifanJunche';
 import CctvBig from './pages/Box5/CctvBig';
 import Join from './Login/Join'
 import Login from './Login/Login'

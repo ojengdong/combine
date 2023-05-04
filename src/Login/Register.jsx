@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import './Register.css'
-import Footer from './Footer'
+import Footer from '../components/LoginFooter'
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import checkimg from "./images/동의 아이콘 1.png" // check

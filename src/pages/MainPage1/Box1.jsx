@@ -2,12 +2,12 @@ import React from 'react'
 import Corona from './Corona.jsx'
 import './Corona.css'
 import './Box1.css'
-import 페이스북 from '../Box1/facebook.png'
-import 인스타그램 from '../Box1/instagram.png'
-import 트위터 from '../Box1/twitter.png'
-import 유튜브 from '../Box1/youtube.png'
-import 콜센터 from '../Box1/call.png'
-import SwiperMenu3 from '../Box1/SwipeMenu3.jsx'
+import 페이스북 from '../MainPage1/facebook.png'
+import 인스타그램 from '../MainPage1/instagram.png'
+import 트위터 from '../MainPage1/twitter.png'
+import 유튜브 from '../MainPage1/youtube.png'
+import 콜센터 from '../MainPage1/call.png'
+import SwiperMenu3 from './SwipeMenu3.jsx'
 
 const Box1 = () => {
 
