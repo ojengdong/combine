@@ -3,10 +3,10 @@ import Index from './pages/index/Index'
 import { BrowserRouter, Routes ,Route } from 'react-router-dom'
 import Mainpage from './pages/Mainpage';
 import GesifanJunche from './pages/MainPage4/GesifanJunche';
-import CctvBig from './pages/Box5/CctvBig';
-import Join from './Login/Join'
-import Login from './Login/Login'
-import Register from './Login/Register'
+import CctvBig from './pages/MainPage5/CctvBig';
+import Join from './pages/LoginJoin/Join'
+import Login from './pages/Login/Login'
+import Register from './pages/LoginRegister/Register'
 
 
 

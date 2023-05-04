@@ -18,7 +18,7 @@ a {
 .global-header {
   width: 100%;
   height: 100vh;
-  background-image: url('./expro-bridge-night-daejeon-korea.jpg');
+  background-image: url('./images/expro-bridge-night-daejeon-korea.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -602,7 +602,7 @@ a {
   .global-header {
     width: 100%;
     height: 500px;
-    background-image: url('./expro-bridge-night-daejeon-korea.jpg');
+    background-image: url('./images/expro-bridge-night-daejeon-korea.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;

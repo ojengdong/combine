@@ -2,7 +2,7 @@
 import React from "react";
 import { useCookies } from "react-cookie";
 import "./Login.css";
-import Ragister from "./Register";
+import Ragister from "../LoginRegister/Register";
 import { Link } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -10,8 +10,8 @@ import { useNavigate } from "react-router-dom";
 import naver from "./images/로그인 아이콘-02.png"; // naver icon
 import apple from "./images/로그인 아이콘-03.png"; // apple icon
 import kakao from "./images/로그인 아이콘-04.png"; // kakao icon
-import deidsth from "./images/로그인 아이콘-06.png"; // uncheck
-import idsth from "./images/로그인 아이콘-05.png"; // check
+import deidsth from "./images/로그인 아이콘-05.png"; // uncheck
+import idsth from "./images/로그인 아이콘-06.png"; // check
 
 const Login = () => {
   // |이 코드는 React 함수형 컴포넌트에서 useEffect 훅과 useState 훅을 사용하여 로컬 스토리지와 쿠키를 다루는 예제입니다.
@@ -66,7 +66,7 @@ const Login = () => {
     setCookie("userInfo", JSON.stringify({ id: idvalue, pw: pwvalue }), {
       path: "/",
     }); // 쿠키에 사용자 정보를 저장
-    navigate("/"); // 페이지를 이동시킴
+    navigate("/Mainpage"); // 페이지를 이동시킴
   };
   return (
     <div className="wrapper">

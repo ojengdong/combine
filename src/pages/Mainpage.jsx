@@ -1,5 +1,5 @@
 import React from 'react'
-import MainBanner from './MainBanner/MainBanner'
+import MainBanner from '../api/MainBanner/MainBanner'
 import Box1 from './MainPage1/Box1'
 import Box2 from './MainPage2/Box2'
 import PublicAnnouncement from './MainPage3/PublicAnnouncement'
