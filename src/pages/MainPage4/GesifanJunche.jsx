@@ -155,7 +155,7 @@ const GesifanJunche = () => {
         <div className='about-freeboard-right'>
           <p>자유게시판은 자유롭게 의견을 게시 할 수 있는 <span className='freeboard-hightright'>열린공간</span> 열린공간이며,</p>
           <p>자율과 책임이 공존하는 사이버문화 정착을 위하여 <span className='freeboard-hightright'>실명</span> 으로 운영되고 있습니다</p>
-          <p>게시된 의견에 대하여는  <span className='freeboard-hightright'>원칙적으로 답변하지 않습니다.</span> 원칙적으로 답변하지 않습니다</p>
+          <p>게시된 의견에 대하여는  <span className='freeboard-hightright'>원칙적으로 답변하지 않습니다.</span></p>
           <p>시정관련 건의사항 또는 <span className='freeboard-hightright'>답변을 원하시는 사항은 국민신문고 코너를 이용</span>하시기 바랍니다.</p>
           <div className='about-freeboard-button'>
             <button>국민신문고 코너 바로가기</button>

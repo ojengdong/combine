@@ -21,6 +21,14 @@ export default () => {
           //   scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
+          breakpoints={{
+            700: {
+              slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,  
+            },
+          }}
       >
 
           <div>
