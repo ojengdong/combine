@@ -798,24 +798,31 @@ li{
         width: 600px;
     }
 
-    .freeboard-main-all-text {
-        float: right;
-        border: none;
-        background-color: transparent;
-        padding: 10px;
-        font-size: 15px;
-        border: 1px solid #a0a0a0;
-        cursor: pointer;
-        transition: all 300ms ease-in-out;
+    .freeboard-main-top-sub {
+        position: relative;
     }
 
-    .gesifan-box11 {
-        width: 100%;
-        margin-top: 50px;
+    .freeborad-today {
+        position: absolute;
+        left: -50px;
     }
+
+    .freeboard-main-all-text {
+        width: 200px;
+        position: absolute;
+        top: 290px;
+        left: 70%;
+    }
+
+    .swiper-container {
+        /* 2개의 슬라이드만 보이도록 설정 */
+        .swiper-slide {
+          width: 50%; /* 슬라이드 너비 조정 */
+        }
+      }
 
     .gesifan-box12 {
-        width: 100%;
+        width: 300px;
     }
 
     .freeboard-focus-inner-box {
@@ -826,11 +833,265 @@ li{
         flex-direction: column;
     }
 
+    .freeboard-detail-btn {
+        width: 90%;
+    }
+
+    .freeboard-detail-btn button {
+        font-size: 20px;
+    }
+
     .gesifan-box-top h3 {
         margin: 0 auto;
     }
 
     .gesifan-box-top p {
         display: none;
+    }
+
+    .gesifan-box-wrapper {
+        margin: 5px;
+    }
+
+    .gesifan-box-list-3 label{
+        width: 105%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+
+    .gesifan-box-list-4 {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+        position: relative;
+    }
+    
+    .gesifan-box-list-4-top {
+        height: 50px;
+        flex-direction: column;
+    }
+
+    .gesifan-box-list-4-top h3 {
+        position: absolute;
+        left: 20px;
+        font-size: 20px;
+    }
+
+    .gesifan-box-list-4-top span {
+        position: absolute;
+        left: 20px;
+        top: 25px;
+        font-size: 14px;
+    }
+
+    .gesifan-box-list-4-agree {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+
+    .gesifan-box-list-4-main {
+        margin-top: 10px;
+        overflow: auto;
+        overflow-y: scroll;
+        height: 150px;
+        padding: 15px;
+    }
+
+    .gesifan-box-list-4-main-text span:first-child {
+        font-weight: bold;
+    }
+
+    .gesifan-box-list-4-uplode-btn {
+        width: 100%;
+    }
+
+    .Gesifan-sort1, 
+    .Gesifan-sort2,
+    .Gesifan-sort3 {
+    padding: 10px 5px;
+    }
+
+    .Gesifan-sort1 span:nth-child(3) {
+        padding: 0 20px;
+    }
+    
+    .Gesifan-sort2 span:nth-child(3) {
+        margin-left: 30px;
+    }
+    
+    .Gesifan-sort2 span:nth-child(4) {
+        margin-left: 30px;
+    }
+
+    .gesifan-box-list-4-uplode-btn button:first-child {
+        width: 200px;
+        border: none;
+        background-color: #a3a3a3;
+        color: #fff;
+    }
+
+    .gesifan-box-list-4-uplode-btn button:last-child {
+        width: 200px;
+        border: none;
+        background-color: #3395e5;
+        color: #fff;
+    }
+
+    .GesifanJunche-footer-wrapper {
+        width: 100%;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:900px) and (min-width:701px) {
+    .about-freeboard {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-freeboard-left {
+        text-align: center;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    
+    .about-freeboard-left h3 {
+        margin-bottom: 0px;
+        font-size: 35px;
+    }
+    
+    .about-freeboard-right p {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    
+    .about-freeboard-button {
+        width: 100%;
+        height: 50px;
+    }
+
+    .freeboard-main-top {
+        margin: 30px 0;
+    }
+
+    .freeboard-main-top-sub {
+        position: relative;
+    }
+    
+    .freeboard-main-all-text {
+        width: 200px;
+        position: absolute;
+        top: 250px;
+        left: 70%;
+    }
+
+    .freeborad-today {
+        position: absolute;
+        left: -55px;
+    }
+
+    .swiper-container {
+        /* 2개의 슬라이드만 보이도록 설정 */
+        .swiper-slide {
+            width: 50%; /* 슬라이드 너비 조정 */
+          }
+      }
+    
+    .gesifan-box11 {
+        width: 120%;
+    }
+    
+    .gesifan-box12 {
+        width: 300px;
+    }
+
+    .gesifan-box12 img {
+        right: 45px;
+    }
+
+    .freeboard-detail-btn {
+        width: 100%;
+    }
+
+    .freeboard-detail-btn button {
+        font-size: 18px;
+        margin-right: 50px;
+    }
+
+    .gesifan-box-top p {
+        display: none;
+    }
+
+    .gesifan-box-list-1 span {
+        margin-right: 8px;
+    }
+
+    .gesifan-box-list-2 span,
+    .gesifan-box-list-3 span {
+        margin-right: 29px;
+    }
+
+    .Gesifan-sort1 span:nth-child(3) {
+        padding: 0 80px;
+    }
+    
+    .Gesifan-sort2 span:nth-child(3) {
+        width: 170px;
+        margin-left: 150px;
+    }
+    
+    .Gesifan-sort2 span:nth-child(4) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 230px;
+    }
+
+    .gesifan-box-list-4 {
+        width: 100%;
+    }
+
+    .gesifan-box-list-4-top {
+        font-size: 14px;
+    }
+    
+    .gesifan-box-list-4-main {
+        padding: 15px;
+    }
+
+    .gesifan-box-list-4-uplode-btn {
+        width: 100%;
+        margin-top: 70px;
+    }
+    
+    .gesifan-box-list-4-uplode-btn button:first-child {
+       width: 210px;
+       background-color: #a3a3a3;
+       color: #fff;
+    }
+
+    .gesifan-box-list-4-uplode-btn button:last-child {
+        width: 210px;
+        background-color: #3395e5;
+        color: #fff;
+    }
+
+    .GesifanJunche-footer-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .GesifanJunche-footer-wrapper p {
+        font-size: 12px;
+    }
+    
+    .GesifanJunche-footer {
+        font-size: 12px;
+        width: 55%;
     }
 }
