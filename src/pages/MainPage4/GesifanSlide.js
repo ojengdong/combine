@@ -15,14 +15,14 @@ export default () => {
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           spaceBetween={50}
-          slidesPerView={3}
+          slidesPerView={2}
           navigation
           pagination={{ clickable: true }}
           //   scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
           breakpoints={{
-            700: {
+            468: {
                 slidesPerView: 2,
               },
               900: {
