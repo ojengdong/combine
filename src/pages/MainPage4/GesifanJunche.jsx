@@ -148,6 +148,7 @@ const GesifanJunche = () => {
       </div>
       
       
+      
       <div className='about-freeboard'>
         <div className='about-freeboard-left'>
           <h3>자유게시판</h3>
