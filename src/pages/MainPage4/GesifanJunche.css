@@ -597,11 +597,13 @@ li{
     align-items: center;
 }
 
-.gesifan-box-list-4-agree input {
+.agree-check {
     margin-right: 5px;
     width: 20px;
     height: 20px;
-    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .gesifan-box-list-4-uplode-btn {
@@ -784,7 +786,8 @@ li{
     }
     
     .about-freeboard-left {
-        width: 550px;
+        width: 500px;
+        padding: 0 10px;
         margin-right: 0;
         margin-bottom: 10px;
     }
@@ -798,12 +801,12 @@ li{
     }
 
     .about-freeboard-right {
-        width: 550px;
+        padding: 0 10px;
+        width: 500px;
     }
 
     .about-freeboard-right p {
-        margin-bottom: 15px;
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .about-freeboard-button {
@@ -930,7 +933,7 @@ li{
     .Gesifan-sort1, 
     .Gesifan-sort2,
     .Gesifan-sort3 {
-    padding: 10px 5px;
+        padding: 10px 5px;
     }
 
     .Gesifan-sort1 span:nth-child(3) {
@@ -962,6 +965,10 @@ li{
     .GesifanJunche-footer-wrapper {
         width: 100%;
         font-size: 10px;
+    }
+
+    .GesifanJunche-footer {
+        width: 60%;
     }
 }
 
@@ -1017,19 +1024,17 @@ li{
         left: -55px;
     }
 
-    .swiper-container {
-        /* 2개의 슬라이드만 보이도록 설정 */
-        .swiper-slide {
-            width: 50%; /* 슬라이드 너비 조정 */
-          }
-      }
-    
-    .gesifan-box11 {
-        width: 120%;
+    .swiper-slide {
+        width: 50% !important;
     }
-    
+
+    .gesifan-box11 {
+        width: 100%;
+        overflow: hidden;
+    }
+
     .gesifan-box12 {
-        width: 500px;
+        width: 90%;
     }
 
     .gesifan-box12 img {

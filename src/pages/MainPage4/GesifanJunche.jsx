@@ -10,6 +10,8 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import GesifanSlide from './GesifanSlide';
 import Mainpage from '../Mainpage';
+import check1 from './images/로그인 아이콘-05.png'
+import check2 from './images/로그인 아이콘-06.png'
 
 
 
@@ -35,6 +37,7 @@ const GesifanJunche = () => {
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [postsPerPage] = useState(10); // 페이지당 보여줄 게시물 수
   const [totalPosts, setTotalPosts] = useState(100); // 총 게시물 수 (예시로 100개 설정)
+  const [agree, setAgree] = useState(false);
 
   // 총 페이지 수 계산
   const totalPages = Math.ceil(totalPosts / postsPerPage);
@@ -275,7 +278,25 @@ const GesifanJunche = () => {
                       본문에 개인정보 &#40; 주민등록번호 , 핸드폰 등  &#41; 가 포함되진 않도록 주의바랍니다
                     </p>
                   </div>
-                  <div className='gesifan-box-list-4-agree'><input type="checkBox" /><span>동의합니다</span></div>
+                  <div className='gesifan-box-list-4-agree'>
+                    <div
+                      htmlFor='agree'
+                      className='agree-check'
+                      style={
+                        agree == true
+                        ? {backgroundImage: `url(${check1})`}
+                        : {backgroundImage: `url(${check2})`}
+                      }
+                      onClick={() => {
+                        setAgree(!agree)
+                      }}
+                    ></div>
+                    <span 
+                      onClick={() => {
+                        setAgree(!agree)
+                      }}
+                    >동의합니다</span>
+                  </div>
                   <div className="gesifan-box-list-4-uplode-btn">
                     <button className='cancle-btn' type="button" onClick={gohome}>취소하기</button>
                     <button className='uplode-btn' type="submit">글올리기</button>
