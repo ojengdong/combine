@@ -790,6 +790,7 @@ li{
         flex-direction: column;
         justify-content: center;
         margin: 30px auto;
+       
     }
     
     .about-freeboard-left {
@@ -819,25 +820,27 @@ li{
     .about-freeboard-button {
         width: 100%;
         margin: 30px 0;
+        
     }
 
     .freeboard-main-wrapper {
-        width: 600px;
+        width: 100%;
     }
 
     .freeboard-main-top-sub {
         position: relative;
+        
     }
 
     .freeborad-today {
         position: absolute;
-        left: -50px;
+        left: -34px;
     }
 
     .freeboard-main-all-text {
-        width: 200px;
+        width: 40%;
         position: absolute;
-        top: 290px;
+        top: 250px;
         left: 70%;
     }
 
@@ -846,17 +849,35 @@ li{
     }
 
     .gesifan-box11 {
-        width: 100%;
+        width: 100vw;
+        margin-top: 50px;
     }
 
     .gesifan-box12 {
-        width: 250px;
+        width: 75%;
+        height: 60%;
+        box-sizing: content-box;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
+        margin-top: 15px;
+        margin: 0 auto;
     }
 
     .gesifan-box12 img {
-        right: 65px;
+        padding: 8px 0;
+        right: 30%;
+    }
+
+    .gesifan-box12-inner {
+    padding: 10px 10px;
+    width: 100%;
+    }
+
+    .gesifan-box12-inner p:last-child{
+        white-space: normal;
+        font-size: 14px;
+        width: 100%;
+        padding: 0;
     }
 
     .freeboard-focus-inner-box {
@@ -868,11 +889,14 @@ li{
     }
 
     .freeboard-detail-btn {
-        width: 90%;
+        width: 100%;
+        margin-right: 4%;
+        justify-content: center;
     }
 
     .freeboard-detail-btn button {
         font-size: 20px;
+        margin-right: 40px;
     }
 
     .gesifan-box-top h3 {
@@ -883,8 +907,83 @@ li{
         display: none;
     }
 
+    .freeboard-focus {
+        width: 100%;
+    }
+
+    .gesifan-box {
+        width: 75%;
+        margin-left: 8%;
+    }
+
     .gesifan-box-wrapper {
-        margin: 5px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .gesifan-box-list-1,
+    .gesifan-box-list-2,
+    .gesifan-box-list-3 {
+        border: 2px solid blue;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .gesifan-box-list-1 span {
+        margin-right: 0;
+        width: 45%;
+    }
+
+    .gesifan-box-list-2 span,
+    .gesifan-box-list-3 span {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-right: 0px;
+    }
+
+    .freeborad-main-line-circle {
+        top: 15px;
+        left: 65px;
+    }
+    
+    @keyframes freeborad-main-circle  {
+        25% {
+            top: 70px;
+            left: 127px;
+        }
+        50% {
+            top: 130px;
+            left: 60px;
+        }
+        75% {
+            top: 190px;
+            left: 128px;
+        }
+        100% {
+            top: 245px;
+            left: 65px;
+        }
+    }
+
+    .freeborad-main-line1 {
+        height: 90px;
+        transform: rotate(-48deg);
+    }
+    
+    .freeborad-main-line2 {
+        height: 90px;
+        transform: rotate(48deg);
+    }
+    
+    .freeborad-main-line3 {
+        height: 90px;
+        transform: rotate(-48deg);
+    }
+    
+    .freeborad-main-line4 {
+        height: 90px;
+        transform: rotate(48deg);
     }
 
     .gesifan-box-list-3 label{
