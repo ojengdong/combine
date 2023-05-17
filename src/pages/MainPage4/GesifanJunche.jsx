@@ -10,13 +10,10 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import GesifanSlide from './GesifanSlide';
 import Mainpage from '../Mainpage';
-
-
-
+import agreecheck1 from './images/동의 아이콘 1.png';
+import agreecheck2 from './images/동의 아이콘 2.png';
 
 const GesifanJunche = () => {
-
-  
   // localStorage.clear()
   // -------------------------------------------
   // const [isGesifanBoxOn, setIsGesifanBoxOn] = useState(false);
@@ -121,6 +118,9 @@ const GesifanJunche = () => {
     setIsGesifanPage(true);
     setIsGesifanModal(true);
   }
+
+  // 동의합니다 체크이미지
+  const [agreecheck, setAgreeCheck] = useState(false)
 
   return (
     
@@ -268,7 +268,24 @@ const GesifanJunche = () => {
                       본문에 개인정보 &#40; 주민등록번호 , 핸드폰 등  &#41; 가 포함되진 않도록 주의바랍니다
                     </p>
                   </div>
-                  <div className='gesifan-box-list-4-agree'><input type="checkBox" /><span>동의합니다</span></div>
+                  <div className='gesifan-box-list-4-agree'>
+                    <div
+                     htmlFor={agree}
+                     className='agree-img'
+                     style={
+                      agreecheck == true 
+                      ? {backgroundImage: `${agreecheck1}`}
+                      : {backgroundImage: `${agreecheck2}`}  
+                     }
+                     onClick={() =>{
+                      setAgreeCheck(!agreecheck)
+                     }}
+                     ></div>
+                    <span
+                      onClick={() => {
+                      setAgreeCheck(!agreecheck)
+                      }}
+                    >동의합니다</span></div>
                   <div className="gesifan-box-list-4-uplode-btn">
                     <button className='cancle-btn' type="button" onClick={gohome}>취소하기</button>
                     <button className='uplode-btn' type="submit">글올리기</button>

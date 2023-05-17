@@ -595,11 +595,11 @@ li{
     align-items: center;
 }
 
-.gesifan-box-list-4-agree input {
-    margin-right: 5px;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+.agree-img {
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    
 }
 
 .gesifan-box-list-4-uplode-btn {
