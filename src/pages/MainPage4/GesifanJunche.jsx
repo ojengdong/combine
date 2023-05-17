@@ -97,8 +97,6 @@ const GesifanJunche = () => {
     setContent('');
   }
 
-
- 
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleSelectChange = (event) => {
@@ -112,7 +110,17 @@ const GesifanJunche = () => {
     day: 'numeric'
   });
 
+  const [isGesifanBox, setIsGesifanBox] = useState(false);
+  const [isGesifanGongji, setIsGesifanGongji] = useState(false);
+  const [isGesifanPage, setIsGesifanPage] = useState(false);
+  const [isGesifanModal, setIsGesifanModal] = useState(false);
 
+  const handleonButton = () => {
+    setIsGesifanBox(true);
+    setIsGesifanGongji(true);
+    setIsGesifanPage(true);
+    setIsGesifanModal(true);
+  }
 
   return (
     
@@ -180,15 +188,7 @@ const GesifanJunche = () => {
             <span className='today-border'>Today</span>
             <span>{GesifanToday}</span>
           </div>
-          <button className='freeboard-main-all-text' onClick={() => {
-
-
-            document.querySelector('.gesifan-box').classList.add('on')
-            document.querySelector('.Gesifangongji').classList.remove('on')
-            document.querySelector('.Gesifanpage').classList.add('on')
-            document.querySelector('.Geshfan-modal').classList.remove('on')
-
-          }}> 전체글 보러가기 &nbsp; &nbsp;   <FontAwesomeIcon icon={faChevronRight} /></button>
+          <button className='freeboard-main-all-text' onClick={handleonButton}> 전체글 보러가기 &nbsp; &nbsp;   <FontAwesomeIcon icon={faChevronRight} /></button>
         </div>
 
         <div className='gesifan-box11'>
@@ -208,24 +208,18 @@ const GesifanJunche = () => {
         <div className="freeboard-focus">
           <div className="freeboard-focus-inner-box">
             <div className='freeboard-detail-btn'>
-              <button className='menu-three menu-three1 ' onClick={() => {
-                document.querySelector('.gesifan-box').classList.add('on')
-                document.querySelector('.Gesifangongji').classList.add('on')
-                document.querySelector('.Gesifanpage').classList.remove('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
-              }}>공지사항</button>
-              <button className='menu-three menu-three2' onClick={() => {
-                document.querySelector('.gesifan-box').classList.remove('on')
-                document.querySelector('.Gesifangongji').classList.remove('on')
-                document.querySelector('.Gesifanpage').classList.remove('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
-              }}>게시글작성하기</button>
-              <button className='menu-three menu-three3' onClick={() => {
-                document.querySelector('.gesifan-box').classList.add('on')
-                document.querySelector('.Gesifangongji').classList.remove('on')
-                document.querySelector('.Gesifanpage').classList.add('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
-              }}>전체게시글</button>
+              <button className='menu-three menu-three1 '
+                onClick={handleonButton}>
+                공지사항
+              </button>
+              <button className='menu-three menu-three2' 
+                onClick={handleonButton}>
+                게시글작성하기
+              </button>
+              <button className='menu-three menu-three3' 
+                onClick={handleonButton}>
+                전체게시글
+              </button>
             </div>
 
 
@@ -307,13 +301,10 @@ const GesifanJunche = () => {
               <ul className='Gesifan-sort2'>
                 <span>{index + 1}</span>
                 <span>{selectedOption}</span>
-                <span style={{ cursor: 'pointer' }} onClick={() => {
-
-                  document.querySelector('.gesifan-box').classList.add('on')
-                  document.querySelector('.Gesifangongji').classList.remove('on')
-                  document.querySelector('.Gesifanpage').classList.remove('on')
-                  document.querySelector('.Geshfan-modal').classList.add('on')
-                }}>{post.title}</span>
+                <span style={{ cursor: 'pointer' }} 
+                  onClick={handleonButton}>
+                  {post.title}
+                </span>
                 {/* <td>{post.content}</td> */}
                 <span>{post.date}</span>
                 <span>{index + 20}</span>
@@ -416,13 +407,9 @@ const GesifanJunche = () => {
       <div className='Geshfan-modal'>
         <div className='Geshfan-modal-moklok'>
           <button
-            onClick={() => {
-              document.querySelector('.gesifan-box').classList.add('on')
-              document.querySelector('.Gesifangongji').classList.remove('on')
-              document.querySelector('.Gesifanpage').classList.add('on')
-              document.querySelector('.Geshfan-modal').classList.remove('on')
-            }
-            }>목록으로 돌아가기</button>
+            onClick={handleonButton}>
+            목록으로 돌아가기
+          </button>
         </div>
         <div>
           <ul className='Gesifan-sort3'>
