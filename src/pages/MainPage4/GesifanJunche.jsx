@@ -112,7 +112,14 @@ const GesifanJunche = () => {
     day: 'numeric'
   });
 
+  const [isGesifanBox,setIsGesifanBox] = useState(false);
+  const [isGesifanGongji, setIsGesifanGongji] = useState(false);
+  const [isGesifanPage, setIsGesifanPage] = useState(false);
+  const [isGesifanModal, setIsGesifanModal] = useState(false);
 
+  const handleButtonClick = () => {
+    
+  }
 
   return (
     
