@@ -251,7 +251,8 @@ li{
 }
 
 .freeboard-main-all-text:hover {
-    background-color: #ececec;
+    background-color: #363636;
+    color: #ececec;
 }
 
 

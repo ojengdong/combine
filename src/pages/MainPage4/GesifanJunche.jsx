@@ -116,14 +116,9 @@ const GesifanJunche = () => {
   const [isGesifanPage, setIsGesifanPage] = useState(false);
   const [isGesifanModal, setIsGesifanModal] = useState(false);
 
-  const handleButtonClick = () => {
-    
-  }
-
   const [agreeche, setAgreeChe] = useState(false)
 
   return (
-    
     <div>
       <div className='Daejeon-video-box'>
         <video autoPlay>
@@ -188,6 +183,7 @@ const GesifanJunche = () => {
             <span className='today-border'>Today</span>
             <span>{GesifanToday}</span>
           </div>
+          {/* 전체 게시글 이동하기 */}
           <button className='freeboard-main-all-text' onClick={() => {
             document.querySelector('.gesifan-box').classList.add('on')
             document.querySelector('.Gesifangongji').classList.remove('on')
@@ -233,7 +229,7 @@ const GesifanJunche = () => {
               }}>전체게시글</button>
             </div>
 
-
+              {/* 게시글 작성하기 */}
             <div className='gesifan-box' >
               <div className="gesifan-box-top">
                 <h3>양식에 따라 게시글을 작성해주세요!</h3>
@@ -325,7 +321,6 @@ const GesifanJunche = () => {
                 <span>{index + 1}</span>
                 <span>{selectedOption}</span>
                 <span style={{ cursor: 'pointer' }} onClick={() => {
-
                   document.querySelector('.gesifan-box').classList.add('on')
                   document.querySelector('.Gesifangongji').classList.remove('on')
                   document.querySelector('.Gesifanpage').classList.remove('on')
@@ -388,9 +383,9 @@ const GesifanJunche = () => {
         </div>
       </div>
 
-
+      {/* 공지사항 */}
       <div className='Gesifangongji'>
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <table>
             <div>
               <ul className='Gesifan-sort1'>
@@ -411,7 +406,7 @@ const GesifanJunche = () => {
           </table>
         </div>
 
-
+        {/* 게시판 공지사항 */}
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{ width: '700px', height: '160px', backgroundColor: '#f7f7f7', marginTop: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
@@ -429,7 +424,7 @@ const GesifanJunche = () => {
           </div>
         </div>
       </div>
-
+      {/* 모달 */}
       <div className='Geshfan-modal'>
         <div className='Geshfan-modal-moklok'>
           <button
