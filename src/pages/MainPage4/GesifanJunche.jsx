@@ -10,9 +10,8 @@ import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import axios from 'axios';
 import GesifanSlide from './GesifanSlide';
 import Mainpage from '../Mainpage';
-
-
-
+import agree1 from './images/동의 아이콘 1.png';
+import agree2 from './images/동의 아이콘 2.png';
 
 const GesifanJunche = () => {
 
@@ -121,6 +120,8 @@ const GesifanJunche = () => {
     
   }
 
+  const [agreeche, setAgreeChe] = useState(false)
+
   return (
     
     <div>
@@ -188,13 +189,10 @@ const GesifanJunche = () => {
             <span>{GesifanToday}</span>
           </div>
           <button className='freeboard-main-all-text' onClick={() => {
-
-
             document.querySelector('.gesifan-box').classList.add('on')
             document.querySelector('.Gesifangongji').classList.remove('on')
             document.querySelector('.Gesifanpage').classList.add('on')
             document.querySelector('.Geshfan-modal').classList.remove('on')
-
           }}> 전체글 보러가기 &nbsp; &nbsp;   <FontAwesomeIcon icon={faChevronRight} /></button>
         </div>
 
@@ -281,13 +279,25 @@ const GesifanJunche = () => {
                       본문에 개인정보 &#40; 주민등록번호 , 핸드폰 등  &#41; 가 포함되진 않도록 주의바랍니다
                     </p>
                   </div>
-                  <div className='gesifan-box-list-4-agree'><input type="checkBox" /><span>동의합니다</span></div>
+                  <div className='gesifan-box-list-4-agree'>
+                    <div
+                      htmlFor='agree'
+                      className='agree-check'
+                      style={
+                        agreeche == true
+                          ? { backgroundImage: `url(${agree1})` }
+                          : { backgroundImage: `url(${agree2})` }
+                      }
+                      onClick={() => {
+                        setAgreeChe(!agreeche)
+                      }}
+                    ></div>
+                    <span>동의합니다</span></div>
                   <div className="gesifan-box-list-4-uplode-btn">
                     <button className='cancle-btn' type="button" onClick={gohome}>취소하기</button>
                     <button className='uplode-btn' type="submit">글올리기</button>
                   </div>
                 </div>
-                
               </form>
             </div>
           </div>
