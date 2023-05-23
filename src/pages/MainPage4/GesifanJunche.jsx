@@ -14,23 +14,6 @@ import agree1 from './images/동의 아이콘 1.png';
 import agree2 from './images/동의 아이콘 2.png';
 
 const GesifanJunche = () => {
-
-  
-  // localStorage.clear()
-  // -------------------------------------------
-  // const [isGesifanBoxOn, setIsGesifanBoxOn] = useState(false);
-  // const [isGesifangongjiOn, setIsGesifangongjiOn] = useState(false);
-  // const [isGesifanpageOn, setIsGesifanpageOn] = useState(false);
-  // const [isGeshfanModalOn, setIsGeshfanModalOn] = useState(false);
-
-  // const handleButtonClick = () => {
-  //   setIsGesifanBoxOn(true);
-  //   setIsGesifangongjiOn(false);
-  //   setIsGesifanpageOn(true);
-  //   setIsGeshfanModalOn(false);
-  // }
-  // --------------------------------------------
-
   const [currentPage, setCurrentPage] = useState(1); // 현재 페이지
   const [postsPerPage] = useState(10); // 페이지당 보여줄 게시물 수
   const [totalPosts, setTotalPosts] = useState(100); // 총 게시물 수 (예시로 100개 설정)
@@ -95,8 +78,6 @@ const GesifanJunche = () => {
     setTitle('');
     setContent('');
   }
-
-
  
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -115,20 +96,8 @@ const GesifanJunche = () => {
   const [isGesifanGongji, setIsGesifanGongji] = useState(false);
   const [isGesifanPage, setIsGesifanPage] = useState(false);
   const [isGesifanModal, setIsGesifanModal] = useState(false);
-  console.log(isGesifanBox,isGesifanGongji,isGesifanPage,isGesifanModal)
 
   const [agreeche, setAgreeChe] = useState(false)
-
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const modalOpenhandler = () => {
-    setModalOpen(true);
-  }
-
-  const [toggle, setToggle] = useState(true);
-  const Togglehandle = () => {
-    setToggle(!toggle);
-  }
 
   return (
     <div>
@@ -148,7 +117,7 @@ const GesifanJunche = () => {
           <div className='scrollBox'>
             <div className='scrollBall'></div>
           </div>
-        </div>
+      </div>
       
       <div>
         <div className='GesifanJunche-text-line'>
@@ -161,7 +130,6 @@ const GesifanJunche = () => {
             <p>사이버 문화, 열린공간</p>
         </div>
       </div>
-      
       
       <div className='about-freeboard'>
         <div className='about-freeboard-left'>
@@ -176,9 +144,7 @@ const GesifanJunche = () => {
             <button>국민신문고 코너 바로가기</button>
           </div>
         </div>
-       
       </div>
-
 
       <div className="freeboard-main-wrapper">
         <div className="freeboard-main-line">
@@ -189,8 +155,6 @@ const GesifanJunche = () => {
           <p>시민들이 주목한 게시글을 확인해보세요</p>
         </div>
 
-
-        { Togglehandle &&
           <div className="freeboard-main-top-sub">
           <div className='freeborad-today'>
             <span className='today-border'>Today</span>
@@ -202,17 +166,11 @@ const GesifanJunche = () => {
             setIsGesifanGongji(false);
             setIsGesifanPage(true);
             setIsGesifanModal(false);
-            // document.querySelector('.gesifan-box').classList.add('on')
-            // document.querySelector('.Gesifangongji').classList.remove('on')
-            // document.querySelector('.Gesifanpage').classList.add('on')
-            // document.querySelector('.Geshfan-modal').classList.remove('on')
           }}> 전체글 보러가기 &nbsp; &nbsp;   <FontAwesomeIcon icon={faChevronRight} /></button>
-        </div>}
+        </div>
 
         <div className='gesifan-box11'>
-
           <GesifanSlide></GesifanSlide>
-
         </div>
 
         <div className="freeborad-main-line-box">
@@ -231,36 +189,24 @@ const GesifanJunche = () => {
                 setIsGesifanGongji(true);
                 setIsGesifanPage(false);
                 setIsGesifanModal(false);
-                // document.querySelector('.gesifan-box').classList.add('on')
-                // document.querySelector('.Gesifangongji').classList.add('on')
-                // document.querySelector('.Gesifanpage').classList.remove('on')
-                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>공지사항</button>
               <button className='menu-three menu-three2' onClick={() => {
                 setIsGesifanBox(true);
                 setIsGesifanGongji(false);
                 setIsGesifanPage(false);
                 setIsGesifanModal(false);
-                // document.querySelector('.gesifan-box').classList.remove('on')
-                // document.querySelector('.Gesifangongji').classList.remove('on')
-                // document.querySelector('.Gesifanpage').classList.remove('on')
-                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>게시글작성하기</button>
               <button className='menu-three menu-three3' onClick={() => {
                 setIsGesifanBox(false);
                 setIsGesifanGongji(false);
                 setIsGesifanPage(true);
                 setIsGesifanBox(false);
-                // document.querySelector('.gesifan-box').classList.add('on')
-                // document.querySelector('.Gesifangongji').classList.remove('on')
-                // document.querySelector('.Gesifanpage').classList.add('on')
-                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>전체게시글</button>
             </div>
 
               {/* 게시글 작성하기 */}
             { isGesifanBox &&
-              <div className={'gesifan-box' + (isGesifanBox ? "on" : "")} >
+            <div className={'gesifan-box' + (isGesifanBox ? "on" : "")} >
               <div className="gesifan-box-top">
                 <h3>양식에 따라 게시글을 작성해주세요!</h3>
                 <p>*은 필수항목 입니다</p>
@@ -330,8 +276,6 @@ const GesifanJunche = () => {
         </div>
       </div>
 
-    
-
       { isGesifanPage && 
         <div className={'Gesifanpage' + (isGesifanPage ? "on" : "")}>
           <div>
@@ -346,7 +290,6 @@ const GesifanJunche = () => {
 
           {posts.map((post, index) => (
             <li key={index}>
-
               <div>
                 <ul className='Gesifan-sort2'>
                   <span>{index + 1}</span>
@@ -356,22 +299,14 @@ const GesifanJunche = () => {
                     setIsGesifanGongji(false);
                     setIsGesifanPage(false);
                     setIsGesifanModal(true);
-                    // document.querySelector('.gesifan-box').classList.add('on')
-                    // document.querySelector('.Gesifangongji').classList.remove('on')
-                    // document.querySelector('.Gesifanpage').classList.remove('on')
-                    // document.querySelector('.Geshfan-modal').classList.add('on')
                   }}>{post.title}</span>
                   {/* <td>{post.content}</td> */}
                   <span>{post.date}</span>
                   <span>{index + 20}</span>
                 </ul>
-
               </div>
-
             </li>
-
           ))}
-
 
           <div>
             <div style={{ display: 'flex', justifyContent: 'center', marginTop: '80px' }} >
@@ -399,7 +334,6 @@ const GesifanJunche = () => {
             </div>
           </div>
 
-
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div style={{ width: '700px', height: '160px', backgroundColor: '#f7f7f7', marginTop: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <div style={{ position: 'relative' }}>
@@ -416,11 +350,12 @@ const GesifanJunche = () => {
               </div>
             </div>
           </div>
-      </div>}
+      </div>
+    }
 
       {/* 공지사항 */}
       { isGesifanGongji &&
-        <div className={'Gesifangongji' + (isGesifanGongji ? "on" : "")}>
+      <div className={'Gesifangongji' + (isGesifanGongji ? "on" : "")}>
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <table>
             <div>
@@ -455,14 +390,14 @@ const GesifanJunche = () => {
                 <option value="">내용</option>
                 <option value="">제목</option>
               </select>
-
             </div>
           </div>
         </div>
       </div>}
+
       {/* 모달 */}
       { isGesifanModal &&
-        <div className={'Geshfan-modal' + (isGesifanModal ? 'on' : "")}>
+      <div className={'Geshfan-modal' + (isGesifanModal ? 'on' : "")}>
         <div className='Geshfan-modal-moklok'>
           <button
             onClick={() => {
@@ -470,12 +405,9 @@ const GesifanJunche = () => {
               setIsGesifanGongji(false);
               setIsGesifanPage(true);
               setIsGesifanModal(true);
-              // document.querySelector('.gesifan-box').classList.add('on')
-              // document.querySelector('.Gesifangongji').classList.remove('on')
-              // document.querySelector('.Gesifanpage').classList.add('on')
-              // document.querySelector('.Geshfan-modal').classList.remove('on')
             }
-            }>목록으로 돌아가기</button>
+            }>목록으로 돌아가기
+          </button>
         </div>
         <div>
           <ul className='Gesifan-sort3'>
@@ -488,8 +420,6 @@ const GesifanJunche = () => {
           <span className='Gesifan-sort3'></span>
         </div>
         <div>
-
-
           <div className='Gesifan-number-slide-btn-wrapper'>
             <div className='Gesifan-number-slide-btn'>
               <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
@@ -509,7 +439,7 @@ const GesifanJunche = () => {
                 <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
                   <FontAwesomeIcon className='faChevronRight' icon={faChevronRight} />
                 </button>
-              </div>
+            </div>
           </div>
         </div>
      
@@ -525,13 +455,10 @@ const GesifanJunche = () => {
                 <option value="">내용</option>
                 <option value="">제목</option>
               </select>
-
             </div>
           </div>
         </div>
-          
       </div>}
- 
 
       <div className='GesifanJunche-footer-wrapper'>
         <ul className='GesifanJunche-footer'>
@@ -544,12 +471,11 @@ const GesifanJunche = () => {
 
         <p>(35242) 대전광역시 서구 둔산로 100 (둔산동)</p>
         <p>(c) DAEJEON METROPOLITAN CITY. ALL RIGHTS RESERVED.</p>
-
       </div>
+
          <Routes>
            <Route path='/gohome' element={<Mainpage/>}></Route>
          </Routes>
-    
     </div>
   );
 }
