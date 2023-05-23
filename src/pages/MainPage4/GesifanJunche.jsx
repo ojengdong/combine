@@ -115,8 +115,20 @@ const GesifanJunche = () => {
   const [isGesifanGongji, setIsGesifanGongji] = useState(false);
   const [isGesifanPage, setIsGesifanPage] = useState(false);
   const [isGesifanModal, setIsGesifanModal] = useState(false);
+  console.log(isGesifanBox,isGesifanGongji,isGesifanPage,isGesifanModal)
 
   const [agreeche, setAgreeChe] = useState(false)
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const modalOpenhandler = () => {
+    setModalOpen(true);
+  }
+
+  const [toggle, setToggle] = useState(true);
+  const Togglehandle = () => {
+    setToggle(!toggle);
+  }
 
   return (
     <div>
@@ -178,19 +190,24 @@ const GesifanJunche = () => {
         </div>
 
 
-        <div className="freeboard-main-top-sub">
+        { Togglehandle &&
+          <div className="freeboard-main-top-sub">
           <div className='freeborad-today'>
             <span className='today-border'>Today</span>
             <span>{GesifanToday}</span>
           </div>
           {/* 전체 게시글 이동하기 */}
           <button className='freeboard-main-all-text' onClick={() => {
-            document.querySelector('.gesifan-box').classList.add('on')
-            document.querySelector('.Gesifangongji').classList.remove('on')
-            document.querySelector('.Gesifanpage').classList.add('on')
-            document.querySelector('.Geshfan-modal').classList.remove('on')
+            setIsGesifanBox(false);
+            setIsGesifanGongji(false);
+            setIsGesifanPage(true);
+            setIsGesifanModal(false);
+            // document.querySelector('.gesifan-box').classList.add('on')
+            // document.querySelector('.Gesifangongji').classList.remove('on')
+            // document.querySelector('.Gesifanpage').classList.add('on')
+            // document.querySelector('.Geshfan-modal').classList.remove('on')
           }}> 전체글 보러가기 &nbsp; &nbsp;   <FontAwesomeIcon icon={faChevronRight} /></button>
-        </div>
+        </div>}
 
         <div className='gesifan-box11'>
 
@@ -210,27 +227,40 @@ const GesifanJunche = () => {
           <div className="freeboard-focus-inner-box">
             <div className='freeboard-detail-btn'>
               <button className='menu-three menu-three1 ' onClick={() => {
-                document.querySelector('.gesifan-box').classList.add('on')
-                document.querySelector('.Gesifangongji').classList.add('on')
-                document.querySelector('.Gesifanpage').classList.remove('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
+                setIsGesifanBox(false);
+                setIsGesifanGongji(true);
+                setIsGesifanPage(false);
+                setIsGesifanModal(false);
+                // document.querySelector('.gesifan-box').classList.add('on')
+                // document.querySelector('.Gesifangongji').classList.add('on')
+                // document.querySelector('.Gesifanpage').classList.remove('on')
+                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>공지사항</button>
               <button className='menu-three menu-three2' onClick={() => {
-                document.querySelector('.gesifan-box').classList.remove('on')
-                document.querySelector('.Gesifangongji').classList.remove('on')
-                document.querySelector('.Gesifanpage').classList.remove('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
+                setIsGesifanBox(true);
+                setIsGesifanGongji(false);
+                setIsGesifanPage(false);
+                setIsGesifanModal(false);
+                // document.querySelector('.gesifan-box').classList.remove('on')
+                // document.querySelector('.Gesifangongji').classList.remove('on')
+                // document.querySelector('.Gesifanpage').classList.remove('on')
+                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>게시글작성하기</button>
               <button className='menu-three menu-three3' onClick={() => {
-                document.querySelector('.gesifan-box').classList.add('on')
-                document.querySelector('.Gesifangongji').classList.remove('on')
-                document.querySelector('.Gesifanpage').classList.add('on')
-                document.querySelector('.Geshfan-modal').classList.remove('on')
+                setIsGesifanBox(false);
+                setIsGesifanGongji(false);
+                setIsGesifanPage(true);
+                setIsGesifanBox(false);
+                // document.querySelector('.gesifan-box').classList.add('on')
+                // document.querySelector('.Gesifangongji').classList.remove('on')
+                // document.querySelector('.Gesifanpage').classList.add('on')
+                // document.querySelector('.Geshfan-modal').classList.remove('on')
               }}>전체게시글</button>
             </div>
 
               {/* 게시글 작성하기 */}
-            <div className='gesifan-box' >
+            { isGesifanBox &&
+              <div className={'gesifan-box' + (isGesifanBox ? "on" : "")} >
               <div className="gesifan-box-top">
                 <h3>양식에 따라 게시글을 작성해주세요!</h3>
                 <p>*은 필수항목 입니다</p>
@@ -295,96 +325,102 @@ const GesifanJunche = () => {
                   </div>
                 </div>
               </form>
-            </div>
+            </div>}
           </div>
         </div>
       </div>
 
     
 
-      <div className='Gesifanpage'>
-        <div>
-          <ul className='Gesifan-sort1'>
-            <span>번호</span>
-            <span>유형</span>
-            <span>제목</span>
-            <span>등록일</span>
-            <span>조회수</span>
-          </ul>
-        </div>
+      { isGesifanPage && 
+        <div className={'Gesifanpage' + (isGesifanPage ? "on" : "")}>
+          <div>
+            <ul className='Gesifan-sort1'>
+              <span>번호</span>
+              <span>유형</span>
+              <span>제목</span>
+              <span>등록일</span>
+              <span>조회수</span>
+            </ul>
+          </div>
 
-        {posts.map((post, index) => (
-          <li key={index}>
+          {posts.map((post, index) => (
+            <li key={index}>
 
-            <div>
-              <ul className='Gesifan-sort2'>
-                <span>{index + 1}</span>
-                <span>{selectedOption}</span>
-                <span style={{ cursor: 'pointer' }} onClick={() => {
-                  document.querySelector('.gesifan-box').classList.add('on')
-                  document.querySelector('.Gesifangongji').classList.remove('on')
-                  document.querySelector('.Gesifanpage').classList.remove('on')
-                  document.querySelector('.Geshfan-modal').classList.add('on')
-                }}>{post.title}</span>
-                {/* <td>{post.content}</td> */}
-                <span>{post.date}</span>
-                <span>{index + 20}</span>
-              </ul>
+              <div>
+                <ul className='Gesifan-sort2'>
+                  <span>{index + 1}</span>
+                  <span>{selectedOption}</span>
+                  <span style={{ cursor: 'pointer' }} onClick={() => {
+                    setIsGesifanBox(false);
+                    setIsGesifanGongji(false);
+                    setIsGesifanPage(false);
+                    setIsGesifanModal(true);
+                    // document.querySelector('.gesifan-box').classList.add('on')
+                    // document.querySelector('.Gesifangongji').classList.remove('on')
+                    // document.querySelector('.Gesifanpage').classList.remove('on')
+                    // document.querySelector('.Geshfan-modal').classList.add('on')
+                  }}>{post.title}</span>
+                  {/* <td>{post.content}</td> */}
+                  <span>{post.date}</span>
+                  <span>{index + 20}</span>
+                </ul>
 
-            </div>
-
-          </li>
-
-        ))}
-
-
-        <div>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '80px' }} >
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <div className='Gesifan-number-slide-btn' >
-                <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
-                  <FontAwesomeIcon className='faAngleLeft' icon={faAngleLeft} />
-                </button>
               </div>
 
-              <div className='Gesifan-number-slide'>
-                {Array.from({ length: postsPerPage }).map((_, index) => (
-                  <div key={index}>
-                    {` ${index + 1 + (currentPage - 1) * postsPerPage}`}
-                  </div>
-                ))}
-              </div>
+            </li>
 
-              <div className='Gesifan-number-slide-btn'>
-                <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
-                  <FontAwesomeIcon className='faChevronRight' icon={faChevronRight} />
-                </button>
+          ))}
+
+
+          <div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '80px' }} >
+              <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className='Gesifan-number-slide-btn' >
+                  <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+                    <FontAwesomeIcon className='faAngleLeft' icon={faAngleLeft} />
+                  </button>
+                </div>
+
+                <div className='Gesifan-number-slide'>
+                  {Array.from({ length: postsPerPage }).map((_, index) => (
+                    <div key={index}>
+                      {` ${index + 1 + (currentPage - 1) * postsPerPage}`}
+                    </div>
+                  ))}
+                </div>
+
+                <div className='Gesifan-number-slide-btn'>
+                  <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>
+                    <FontAwesomeIcon className='faChevronRight' icon={faChevronRight} />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
 
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ width: '700px', height: '160px', backgroundColor: '#f7f7f7', marginTop: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ position: 'relative' }}>
-              <input style={{ width: '200px', height: '30px' }} type="text" placeholder=' 제목 + 내용' />
-              {
-                <FontAwesomeIcon style={{ position: 'absolute', top: '10px', left: '180px' }} icon={faMagnifyingGlass} />
-              }
-              <select style={{ marginLeft: '30px', width: '100px', height: '35px' }} name="" id="">
-                <option value="">전체</option>
-                <option value="">내용</option>
-                <option value="">제목</option>
-              </select>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ width: '700px', height: '160px', backgroundColor: '#f7f7f7', marginTop: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <div style={{ position: 'relative' }}>
+                <input style={{ width: '200px', height: '30px' }} type="text" placeholder=' 제목 + 내용' />
+                {
+                  <FontAwesomeIcon style={{ position: 'absolute', top: '10px', left: '180px' }} icon={faMagnifyingGlass} />
+                }
+                <select style={{ marginLeft: '30px', width: '100px', height: '35px' }} name="" id="">
+                  <option value="">전체</option>
+                  <option value="">내용</option>
+                  <option value="">제목</option>
+                </select>
 
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+      </div>}
 
       {/* 공지사항 */}
-      <div className='Gesifangongji'>
+      { isGesifanGongji &&
+        <div className={'Gesifangongji' + (isGesifanGongji ? "on" : "")}>
         <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
           <table>
             <div>
@@ -423,16 +459,21 @@ const GesifanJunche = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div>}
       {/* 모달 */}
-      <div className='Geshfan-modal'>
+      { isGesifanModal &&
+        <div className={'Geshfan-modal' + (isGesifanModal ? 'on' : "")}>
         <div className='Geshfan-modal-moklok'>
           <button
             onClick={() => {
-              document.querySelector('.gesifan-box').classList.add('on')
-              document.querySelector('.Gesifangongji').classList.remove('on')
-              document.querySelector('.Gesifanpage').classList.add('on')
-              document.querySelector('.Geshfan-modal').classList.remove('on')
+              setIsGesifanBox(false);
+              setIsGesifanGongji(false);
+              setIsGesifanPage(true);
+              setIsGesifanModal(true);
+              // document.querySelector('.gesifan-box').classList.add('on')
+              // document.querySelector('.Gesifangongji').classList.remove('on')
+              // document.querySelector('.Gesifanpage').classList.add('on')
+              // document.querySelector('.Geshfan-modal').classList.remove('on')
             }
             }>목록으로 돌아가기</button>
         </div>
@@ -489,7 +530,7 @@ const GesifanJunche = () => {
           </div>
         </div>
           
-        </div>
+      </div>}
  
 
       <div className='GesifanJunche-footer-wrapper'>
