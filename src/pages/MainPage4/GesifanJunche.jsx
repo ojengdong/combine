@@ -200,7 +200,7 @@ const GesifanJunche = () => {
                 setIsGesifanBox(false);
                 setIsGesifanGongji(false);
                 setIsGesifanPage(true);
-                setIsGesifanBox(false);
+                setIsGesifanModal(false);
               }}>전체게시글</button>
             </div>
 
