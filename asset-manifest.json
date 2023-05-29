@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/combine/static/css/main.bc337f85.css",
+    "main.js": "/combine/static/js/main.488ae596.js",
+    "static/js/787.d86d8cd9.chunk.js": "/combine/static/js/787.d86d8cd9.chunk.js",
+    "static/media/당신이 마주할 대전, 당신에게 대전이란.mp4": "/combine/static/media/당신이 마주할 대전, 당신에게 대전이란.6359766e300944e9d40b.mp4",
+    "static/media/대전야경3.png": "/combine/static/media/대전야경3.9be409280d69a18f761f.png",
+    "static/media/AnyConv.com__JSArirangHON.woff": "/combine/static/media/AnyConv.com__JSArirangHON.9ba1a025ab92705d89ca.woff",
+    "static/media/AnyConv.com__Pretendard-Bold.woff": "/combine/static/media/AnyConv.com__Pretendard-Bold.a3797fe38b3e95cb9692.woff",
+    "static/media/AnyConv.com__Pretendard-Medium.woff": "/combine/static/media/AnyConv.com__Pretendard-Medium.424b04a2cfc821ebf7ef.woff",
+    "static/media/AnyConv.com__NanumSquareNeo-dEb.woff": "/combine/static/media/AnyConv.com__NanumSquareNeo-dEb.1c1a340e57fc8462cdd1.woff",
+    "static/media/expro-bridge-night-daejeon-korea.jpg": "/combine/static/media/expro-bridge-night-daejeon-korea.a3777361d370ee77ac98.jpg",
+    "static/media/AnyConv.com__강원교육튼튼 (1).woff": "/combine/static/media/AnyConv.com__강원교육튼튼 (1).7efac485c830a28be09a.woff",
+    "static/media/georgia.woff": "/combine/static/media/georgia.d24d28c993b8d7beac48.woff",
+    "static/media/instagram.png": "/combine/static/media/instagram.5480bb78be17ac241991.png",
+    "static/media/call.png": "/combine/static/media/call.616631797991324a51a2.png",
+    "static/media/youtube.png": "/combine/static/media/youtube.bad3b032f93f954683fc.png",
+    "static/media/twitter.png": "/combine/static/media/twitter.b1c12557d44c821052d9.png",
+    "static/media/facebook.png": "/combine/static/media/facebook.02cdb3871c49bae31cae.png",
+    "index.html": "/combine/index.html",
+    "main.bc337f85.css.map": "/combine/static/css/main.bc337f85.css.map",
+    "main.488ae596.js.map": "/combine/static/js/main.488ae596.js.map",
+    "787.d86d8cd9.chunk.js.map": "/combine/static/js/787.d86d8cd9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bc337f85.css",
+    "static/js/main.488ae596.js"
+  ]
+}
