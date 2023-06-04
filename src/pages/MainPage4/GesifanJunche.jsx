@@ -297,8 +297,8 @@ const GesifanJunche = () => {
                   <span style={{ cursor: 'pointer' }} onClick={() => {
                     setIsGesifanBox(false);
                     setIsGesifanGongji(false);
-                    setIsGesifanPage(false);
-                    setIsGesifanModal(true);
+                    setIsGesifanPage(true);
+                    setIsGesifanModal(false);
                   }}>{post.title}</span>
                   {/* <td>{post.content}</td> */}
                   <span>{post.date}</span>
@@ -403,7 +403,7 @@ const GesifanJunche = () => {
             onClick={() => {
               setIsGesifanBox(false);
               setIsGesifanGongji(false);
-              setIsGesifanPage(true);
+              setIsGesifanPage(false);
               setIsGesifanModal(true);
             }
             }>목록으로 돌아가기

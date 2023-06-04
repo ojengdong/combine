@@ -751,7 +751,11 @@ li{
     margin-bottom: 20px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width:468){
+    
+}
+
+/* @media screen and (max-width: 700px) {
     .Daejeon-video-box video {
         width: 100%;
         height: 100vh;
@@ -818,9 +822,9 @@ li{
     }
 
     .swiper-container {
-        /* 2개의 슬라이드만 보이도록 설정 */
+        
         .swiper-slide {
-          width: 50%; /* 슬라이드 너비 조정 */
+          width: 50%; 
         }
       }
 
@@ -947,9 +951,9 @@ li{
         width: 100%;
         font-size: 10px;
     }
-}
+} */
 
-@media screen and (max-width:900px) and (min-width:701px) {
+/* @media screen and (max-width:900px) and (min-width:701px) {
     .about-freeboard {
         flex-direction: column;
         text-align: center;
@@ -997,9 +1001,8 @@ li{
     }
 
     .swiper-container {
-        /* 2개의 슬라이드만 보이도록 설정 */
         .swiper-slide {
-            width: 50%; /* 슬라이드 너비 조정 */
+            width: 50%;
           }
       }
     
@@ -1097,4 +1100,4 @@ li{
         font-size: 12px;
         width: 55%;
     }
-}
+} */
